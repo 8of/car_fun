@@ -7,7 +7,11 @@
 //
 
 enum FuelType: String {
-  case D = "D"
-  case P = "P"
-  case E = "E"
+  case D
+  case P
+  case E
 }
+
+// MARK: - Decodable
+
+extension FuelType: Decodable {}

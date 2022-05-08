@@ -9,40 +9,32 @@
 import Foundation
 
 final class CarService {
-
+  
   private let networkClient: NetworkClientInterface!
-  private let parser = Parser()
-
+  
   init(networkClient: NetworkClientInterface) {
     self.networkClient = networkClient
   }
-
+  
   private init() {
     networkClient = nil
   }
-
+  
 }
 
 // MARK: - CarServiceInterface
 
 extension CarService: CarServiceInterface {
-
+  
   func getCarList(page: Int, success: @escaping ([Car])->(), error: @escaping ()->()) {
     networkClient.getCarList(
       page: page,
-      success: {
-        [weak self]
-        array in
-        guard let self = self,
-          let res = array as? [[String: Any]]
-          else {
-            error()
-            return
-        }
-        let list = self.parser.parseCars(dictionary: res)
-        success(list)
+      success: { cars in
+        success(cars)
       }, error: error
     )
   }
-
+  
 }
+
+

@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     let router = Router()
+    window?.rootViewController?.view.backgroundColor = .white
     router.setupRootViewController(on: window?.rootViewController)
     window?.makeKeyAndVisible()
     return true

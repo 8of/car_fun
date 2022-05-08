@@ -28,7 +28,6 @@
 		94A43AF023789A6C00725CEC /* LocalClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A43AEF23789A6C00725CEC /* LocalClient.swift */; };
 		94B7C4AF22B94BF200BF6191 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B7C4A422B94BF200BF6191 /* NetworkClient.swift */; };
 		94B7C4B122B94BF200BF6191 /* NetworkClientInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B7C4A622B94BF200BF6191 /* NetworkClientInterface.swift */; };
-		94B7C4B222B94BF200BF6191 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B7C4A722B94BF200BF6191 /* Parser.swift */; };
 		94B7C4B322B94BF200BF6191 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B7C4A922B94BF200BF6191 /* Router.swift */; };
 		94B7C4B422B94BF200BF6191 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B7C4AC22B94BF200BF6191 /* Size.swift */; };
 		94B7C4B522B94BF200BF6191 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B7C4AD22B94BF200BF6191 /* Style.swift */; };
@@ -71,7 +70,6 @@
 		94A43AEF23789A6C00725CEC /* LocalClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalClient.swift; sourceTree = "<group>"; };
 		94B7C4A422B94BF200BF6191 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		94B7C4A622B94BF200BF6191 /* NetworkClientInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClientInterface.swift; sourceTree = "<group>"; };
-		94B7C4A722B94BF200BF6191 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		94B7C4A922B94BF200BF6191 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		94B7C4AC22B94BF200BF6191 /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		94B7C4AD22B94BF200BF6191 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
@@ -118,7 +116,9 @@
 				99C357FE51A4695094A58019 /* Pods */,
 				91FCE08BB658A5F1D2D0C927 /* Frameworks */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		9437FA0122B9487E00497439 /* Products */ = {
 			isa = PBXGroup;
@@ -191,7 +191,6 @@
 				941E838D22B972A30005B592 /* CarService.swift */,
 				94B7C4A622B94BF200BF6191 /* NetworkClientInterface.swift */,
 				94B7C4A422B94BF200BF6191 /* NetworkClient.swift */,
-				94B7C4A722B94BF200BF6191 /* Parser.swift */,
 				941E839322B974A10005B592 /* ServicesAssembly.swift */,
 				94A43AEF23789A6C00725CEC /* LocalClient.swift */,
 			);
@@ -361,7 +360,6 @@
 				94B7C4C222B94FB000BF6191 /* CarMapPresenter.swift in Sources */,
 				94A43AF023789A6C00725CEC /* LocalClient.swift in Sources */,
 				94B7C4B122B94BF200BF6191 /* NetworkClientInterface.swift in Sources */,
-				94B7C4B222B94BF200BF6191 /* Parser.swift in Sources */,
 				941E839222B973C40005B592 /* CarListViewModel.swift in Sources */,
 				94B7C4B322B94BF200BF6191 /* Router.swift in Sources */,
 				94B7C4BC22B94F1F00BF6191 /* CarListViewController.swift in Sources */,

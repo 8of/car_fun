@@ -9,21 +9,23 @@
 import Foundation
 
 final class LocalClient {
-
+  
 }
 
 // MARK: - NetworkClientInterface
 
 extension LocalClient: NetworkClientInterface {
-    func getCarList(page: Int, success: @escaping ([Any]) -> (), error: @escaping () -> ()) {
-        let path: String! = Bundle.main.path(forResource: "cars", ofType: "json")
-        let data = try! Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-        let jsonResult = try! JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-        guard let result = jsonResult as? [Any] else {
-          error()
-          return;
-        }
-        success(result)
+  func getCarList(page: Int, success: @escaping ([Car]) -> (), error onError: @escaping () -> ()) {
+    let path: String! = Bundle.main.path(forResource: "cars", ofType: "json")
+    let data = try! Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+    
+    do {
+      let result = try JSONDecoder().decode([Car].self, from: data)
+      success(result)
+    } catch {
+      onError()
     }
-
+  }
+  
 }
+

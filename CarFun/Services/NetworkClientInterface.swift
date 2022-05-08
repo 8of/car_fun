@@ -6,8 +6,8 @@
 //  Copyright © 2019 Test. All rights reserved.
 //
 
-protocol NetworkClientInterface: class {
+protocol NetworkClientInterface: AnyObject {
 
-  func getCarList(page: Int, success: @escaping ([Any])->(), error: @escaping ()->())
+  func getCarList(page: Int, success: @escaping ([Car])->(), error: @escaping ()->())
 
 }

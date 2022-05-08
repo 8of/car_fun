@@ -7,9 +7,8 @@
 //
 
 struct Car {
-
   // Maybe idx instead of id in case we'll move to ObjC (I hope not!)
-  // Becuase 'id; is reserved word in ObjC
+  // Becuase 'id is reserved word in ObjC
   let id: String
   let modelIdentifier: String
   let modelName: String
@@ -26,5 +25,28 @@ struct Car {
   let longitude: Float
   let innerCleanliness: String
   let imageUrl: String
-
 }
+
+// MARK: - Codable
+
+extension Car: Decodable {
+  enum CodingKeys: String, CodingKey {
+    case id
+    case modelIdentifier
+    case modelName
+    case name
+    case make
+    case group
+    case color
+    case series
+    case fuelType
+    case fuelLevel
+    case transmission
+    case licensePlate
+    case latitude
+    case longitude
+    case innerCleanliness
+    case imageUrl = "carImageUrl"
+  }
+}
+

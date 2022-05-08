@@ -7,6 +7,10 @@
 //
 
 enum TransmissionType: String {
-  case M = "M"
-  case A = "A"
+  case M
+  case A
 }
+
+// MARK: - Decodable
+
+extension TransmissionType: Decodable {}
